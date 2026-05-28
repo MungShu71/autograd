@@ -33,14 +33,15 @@ class Dataloader:
                 idx = x + y * 32
                 idx2 = x + (y + 1) * 32
                 r1, g1, b1 = image[idx], image[idx + 32 * 32], image[idx + 32 * 32 * 2]
+
                 r2, g2, b2 = (
                     image[idx2],
                     image[idx2 + 32 * 32],
                     image[idx2 + 32 * 32 * 2],
                 )
-                print(f"\x1b[38;2;{r1};{g1};{b1}m\x1b[48;2;{r2};{g2};{b2}m ", end="")
+                print(f"\x1b[38;2;{r1};{g1};{b1}m\x1b[48;2;{r2};{g2};{b2}m▀", end="")
             print("\x1b[0m")
-
+            
         print(f"Label: {classes[self.labels[index]]}")
         print(f"Label: {[self.labels[index]]}")
 
