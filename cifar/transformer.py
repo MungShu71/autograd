@@ -27,7 +27,7 @@ class Dataloader:
         self.num_samples = self.images.shape[0]
 
     def draw(self, index=0):
-        image = self.images.reshape(-1, 3 * 32 * 32)[index]
+        image = self.images.reshape(-1, 3 * 32 * 32)[index].astype(int)
         for y in range(0, 32, 2):
             for x in range(32):
                 idx = x + y * 32
