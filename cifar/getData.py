@@ -1,4 +1,4 @@
-from IPython.testing import test
+
 import torch
 import torchvision
 import numpy as np
